@@ -1,5 +1,4 @@
 - 👋 Hi, I’m @DennisKuhlmann
-- 👀 I’m interested in ...
 - 🌱 I’m currently learning JavaScrpt
 - 💞️ I’m looking to collaborate on JavaScript projects
 - 📫 How to reach me: DiscordTag => !Duplaix | Dennis#9636
