@@ -1,7 +1,7 @@
-- 👋 Hi, I’m @DennisKuhlmann
-- 🌱 I’m currently learning JavaScrpt
-- 💞️ I’m looking to collaborate on JavaScript projects
-- 📫 How to reach me: DiscordTag => !Duplaix | Dennis#9636
+- 👋 Hi, I’m @Dennis
+- 🌱 I’m currently learning PHP
+- 💞️ I’m looking for professional exchange
+- 📫 How to reach me: DiscordTag => devXperience#8760
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E4KTZN9)
 
