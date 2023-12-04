@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @Dennis
-- 🌱 I’m currently learning PHP
+- 🌱 I’m currently learning PHP, Node.js and JavaScript
 - 💞️ I’m looking for professional exchange
 - 📫 How to reach me: DiscordTag => devXperience
 
