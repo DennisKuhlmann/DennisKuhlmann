@@ -1,9 +1,7 @@
 - 👋 Hi, I’m @Dennis
 - 🌱 I’m currently learning PHP, Node.js and JavaScript
 - 💞️ I’m looking for professional exchange
-- 📫 How to reach me: DiscordTag => devXperience
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E4KTZN9)
 
 
 <!---
