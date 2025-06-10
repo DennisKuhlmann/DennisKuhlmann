@@ -1,6 +1,4 @@
 - 👋 Hi, I’m @Dennis
-- 🌱 I’m currently learning PHP, Node.js and JavaScript
-- 💞️ I’m looking for professional exchange
 
 
 
