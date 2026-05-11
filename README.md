@@ -10,72 +10,69 @@ Die folgenden Projekte zeigen, wie ich komplexe Anforderungen in saubere, wartba
 
 ---
 
-## 🛡️ **Benutzermanagement & Mandanten-Hierarchie**
+## 🛡️ **Web-basierter IMAP Viewer**
 
-**📅 Zeitraum:** [Aktuell]
-**🏢 Unternehmen:** Aspeo GmbH
+**📅 Zeitraum:** Jan. 2026 – März 2026
+**🏢 Unternehmen:** [Aspeo GmbH](https://www.aspeo.de?utm_source=chatgpt.com)
 
 ### 🎯 Ausgangssituation
 
-Es wurde eine strukturierte Verwaltungsebene für Benutzer und Firmen benötigt, die eine strikte hierarchische Trennung von Zugriffsrechten und Daten gewährleistet. Ziel war es, unterschiedliche Sichtbarkeiten und Verwaltungsbefugnisse für globale Administratoren, Firmen-Admins und Endbenutzer zu etablieren.
+In professionellen Umgebungen bestand der Bedarf, E-Mails sicher und effizient in interne Management- und Workflow-Systeme zu überführen, ohne sensible Zugangsdaten dauerhaft zentral zu speichern. Bestehende Lösungen boten keine ausreichende Kombination aus Datenschutz, Sicherheitsmechanismen und flexibler Weiterverarbeitung von E-Mail-Daten.
 
 ### 💡 Aufgabe
 
-Entwicklung eines differenzierten **Benutzer- und Mandantenmanagements**, das rollenbasierte Dashboards, spezifische CRUD-Rechte und eine mandantenabhängige Konfiguration (z. B. für LLM-Hosts und Token-Preise) bereitstellt.
+Entwicklung eines performanten und hochsicheren webbasierten IMAP-Clients mit Fokus auf Datenschutz, zustandsloser Architektur und nahtloser Integration in bestehende Unternehmensprozesse. Ziel war eine moderne Oberfläche mit sicherer E-Mail-Verarbeitung, intelligenter Synchronisation und Exportmöglichkeiten für externe Systeme.
 
 ### 🧠 Vorgehen
 
-## Rollenkonzept
+## Architektur & Sicherheit
 
-- **Superadmin**  
-  Vollzugriff auf systemweite Daten, Firmen und Auswertungen.  
-  Bereitstellung von Auswahl- und Filterfunktionen für Firmen.
+* Entwicklung einer zustandslosen Proxy-Architektur auf Basis von PHP 8 und der IMAP-Extension.
+* Umsetzung einer Zero-Storage-Policy ohne dauerhafte Speicherung sensibler Zugangsdaten auf dem Server.
+* Implementierung einer AES-256-CBC-Verschlüsselung zur temporären Speicherung von Zugangsdaten im LocalStorage für Session-Restore-Funktionen.
+* Integration umfangreicher Sicherheitsmechanismen:
 
-- **Admin**  
-  Zugriff und Bearbeitungsrechte beschränkt auf den eigenen Zuständigkeitsbereich.  
+  * HTML-Sanitizing
+  * Tracking-Pixel-Blocker
+  * Iframe-Sandboxing
+  * Link-Security-Warnungen gegen potenzielles Phishing
 
-- **Benutzer**  
-  Zugriff ausschließlich auf eigene, zugeordnete Daten.
+## E-Mail-Verarbeitung
 
-## Datenbank & Konfiguration
+* Entwicklung eines rekursiven MIME-Parsers zur Verarbeitung komplexer Multipart-E-Mails:
 
-- Erweiterung um erforderliche Parameter.
-- Abbildung mandantenspezifischer Konfigurationen.
-- Anpassung bestehender Systemkonfigurationen.
+  * HTML-Inhalte
+  * Plain-Text
+  * CID-Inlining für eingebettete Inhalte
+* Umsetzung einer serverseitigen Suche über IMAP_SEARCH.
+* Aufbau einer Cache-Management-Logik zur Optimierung großer Postfächer und Ladezeiten.
 
-## Dashboard & Statistiken
+## Benutzeroberfläche & UX
 
-- Bereitstellung statistischer Auswertungen:
-  - Letzte 30 Tage
-  - Letzter Monat
-  - Aktueller Monat
-- Rollenabhängige Aufbereitung der Daten:
-  - Superadmin: systemweit
-  - Admin: firmenspezifisch
-  - Benutzer: personenbezogen
+* Entwicklung eines responsiven 3-Spalten-Layouts mit Bootstrap 5 und Smarty.
+* Asynchrone Synchronisation von Ordnern und E-Mails für eine flüssige Benutzererfahrung.
+* Optimierung interner Workflows durch strukturierte Darstellung und schnelle Navigation.
 
-## Menüstruktur & Funktionen
+## Schnittstellen & Export
 
-- Dynamischer Aufbau der Hauptmenüpunkte abhängig von der Rolle:
-  - **Superadmin**: Statistik, Benutzerverwaltung, Firmenverwaltung
-  - **Admin**: Statistik, Benutzerverwaltung
-  - **Benutzer**: Statistik
-- Integration grundlegender Profilfunktionen (z. B. Passwortänderung).
-
+* Entwicklung eines flexiblen Export-Systems im JSON-Format.
+* Unterstützung zusätzlicher Header-Informationen (inkl. X-Header) zur Weiterverarbeitung in Drittsystemen.
+* Bereitstellung einer sicheren Brücke zwischen E-Mail-Kommunikation und internen Geschäftsprozessen.
 
 ### 📈 Ergebnis
 
-Ein hierarchisches Verwaltungssystem, das eine saubere Mandantentrennung sicherstellt. Es ermöglicht Superadmins die globale Steuerung, während Company-Admins ihre Einheiten eigenständig verwalten können, ohne Zugriff auf fremde Daten zu erhalten.
+Ein hochprofessioneller webbasierten IMAP-Client, der maximale Datensicherheit mit einer performanten und modernen Benutzeroberfläche kombiniert. Die Anwendung ermöglicht die sichere Verarbeitung und strukturierte Weitergabe von E-Mail-Daten, ohne die Privatsphäre der Nutzer oder Unternehmensrichtlinien zu kompromittieren.
 
 ### 🛠️ Technologien
 
-`PHP` · `MySQL` · `User Role Management` · `Mandantenfähigkeit` · `Backend Architecture` · `Statistik-Module`
+`PHP 8` · `JavaScript` · `MySQL` · `IMAP` · `Bootstrap 5` · `Smarty` · `AES-256-CBC` · `HTML Sanitizing` · `MIME Parsing` · `JSON Export` · `Responsive UI` · `Security Architecture`
+
 
 ---
 
 ## 🏗️ **Bild- und PDF-Export-App für Immobiliengutachten**
 
-**📅 Zeitraum:** Nov 2025 – Heute
+**📅 Zeitraum:** Nov 2025 – März 2026
 **🏢 Unternehmen:** Aspeo GmbH
 
 ### 🎯 Ausgangssituation
@@ -109,7 +106,7 @@ Sie befindet sich aktuell im **Pilotbetrieb** und wird kontinuierlich weiterentw
 ---
 ## ⚙️ **Vermarkter-Backend – Abrechnungssystem für das Recruiting Tool**
 
-**📅 Zeitraum:** Jan 2025 – Heute
+**📅 Zeitraum:** Jan 2025 – März 2026
 **🏢 Unternehmen:** Aspeo GmbH
 
 ### 🎯 Ausgangssituation
@@ -145,7 +142,7 @@ Der Rollout erfolgt schrittweise parallel mit dem Hauptsystem.
 
 ## 🧩 **Recruiting Tool – Bewerberverwaltung & Matching-System**
 
-**📅 Zeitraum:** Jan 2024 – Heute
+**📅 Zeitraum:** Jan 2024 – März 2026
 **🏢 Unternehmen:** Aspeo GmbH
 
 ### 🎯 Ausgangssituation
