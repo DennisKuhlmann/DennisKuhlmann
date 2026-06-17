@@ -1,387 +1,208 @@
-## 💼 **Projektübersicht**
+# 💼 Dev Profile – Backend Systems & Architecture Overview
 
-Ich entwickle Software, die **funktioniert**, **verständlich bleibt** und **langfristig stabil läuft**.
-Mein Schwerpunkt liegt in der **Backend- und Systementwicklung mit PHP, MySQL und JavaScript**, ergänzt durch moderne Webtechnologien wie **Smarty, jQuery, Bootstrap und DataTables**.
+## 🧠 Backend Softwareentwickler | Systemarchitektur & datengetriebene Anwendungen
 
-In den letzten Jahren habe ich bei der **Aspeo GmbH** verschiedene Systeme aufgebaut. Von **mandantenfähigen Plattformen** über **E-Rechnungstools** bis zu **automatisierten Import- und Monitoring-Lösungen**.
-Alle Projekte verbindet ein Ziel: **Prozesse automatisieren, Fehlerquellen minimieren und nachhaltige Strukturen schaffen.**
+Ich entwickle skalierbare Backend-Systeme mit Fokus auf **PHP-basierte Architekturen**, **Multi-Tenant-Plattformen** und **automatisierte Datenverarbeitung**.
 
-Die folgenden Projekte zeigen, wie ich komplexe Anforderungen in saubere, wartbare und sichere Softwarelösungen übersetze.
+Mein Schwerpunkt liegt auf der Entwicklung von **produktiven Unternehmenssystemen**, die Prozesse automatisieren, Datenstrukturen sauber abbilden und langfristig wartbar bleiben.
 
 ---
 
-## 🛡️ **Web-basierter IMAP Viewer**
+## 🎯 Fokusbereiche
 
-**📅 Zeitraum:** Jan. 2026 – März 2026
-**🏢 Unternehmen:** [Aspeo GmbH](https://www.aspeo.de?utm_source=chatgpt.com)
+- 🏗️ Multi-Tenant & SaaS-Architekturen  
+- ⚙️ Backend-Systeme mit PHP & MySQL  
+- 🔄 Automatisierung (Cronjobs, Imports, Pipelines)  
+- 📊 Datenverarbeitung & Business-Logik  
+- 🔐 Rollen- & Berechtigungssysteme  
+- 🌐 API-nahe Systemintegration  
 
-### 🎯 Ausgangssituation
+---
 
-In professionellen Umgebungen bestand der Bedarf, E-Mails sicher und effizient in interne Management- und Workflow-Systeme zu überführen, ohne sensible Zugangsdaten dauerhaft zentral zu speichern. Bestehende Lösungen boten keine ausreichende Kombination aus Datenschutz, Sicherheitsmechanismen und flexibler Weiterverarbeitung von E-Mail-Daten.
+## 🧰 Tech Stack
 
-### 💡 Aufgabe
+### 💻 Core Backend
+`PHP` · `MySQL` · `JavaScript`
 
-Entwicklung eines performanten und hochsicheren webbasierten IMAP-Clients mit Fokus auf Datenschutz, zustandsloser Architektur und nahtloser Integration in bestehende Unternehmensprozesse. Ziel war eine moderne Oberfläche mit sicherer E-Mail-Verarbeitung, intelligenter Synchronisation und Exportmöglichkeiten für externe Systeme.
+### 🧱 Frameworks & Libraries
+`Smarty` · `Bootstrap` · `jQuery` · `DataTables`
 
-### 🧠 Vorgehen
+### ⚙️ System & DevOps
+`Linux` · `Docker (Learning)` · `Cronjobs` · `Git`
 
-## Architektur & Sicherheit
+### 🧪 Architektur & Konzepte
+`Multi-Tenant Systems` · `Role-Based Access Control` · `ETL Pipelines` · `System Design`
 
-* Entwicklung einer zustandslosen Proxy-Architektur auf Basis von PHP 8 und der IMAP-Extension.
-* Umsetzung einer Zero-Storage-Policy ohne dauerhafte Speicherung sensibler Zugangsdaten auf dem Server.
-* Implementierung einer AES-256-CBC-Verschlüsselung zur temporären Speicherung von Zugangsdaten im LocalStorage für Session-Restore-Funktionen.
-* Integration umfangreicher Sicherheitsmechanismen:
+---
 
-  * HTML-Sanitizing
-  * Tracking-Pixel-Blocker
-  * Iframe-Sandboxing
-  * Link-Security-Warnungen gegen potenzielles Phishing
+## 🏢 Berufliche Projekte (Aspeo GmbH)
 
-## E-Mail-Verarbeitung
+---
 
-* Entwicklung eines rekursiven MIME-Parsers zur Verarbeitung komplexer Multipart-E-Mails:
+# 🏗️ Core Business Systeme
 
-  * HTML-Inhalte
-  * Plain-Text
-  * CID-Inlining für eingebettete Inhalte
-* Umsetzung einer serverseitigen Suche über IMAP_SEARCH.
-* Aufbau einer Cache-Management-Logik zur Optimierung großer Postfächer und Ladezeiten.
+## 🧩 Recruiting Tool – Bewerberverwaltung & Matching-System
 
-## Benutzeroberfläche & UX
+### ⚡ TL;DR
+Multi-Tenant Recruiting Plattform mit automatisiertem Matching, Kampagnenlogik und Mandantenverwaltung.
 
-* Entwicklung eines responsiven 3-Spalten-Layouts mit Bootstrap 5 und Smarty.
-* Asynchrone Synchronisation von Ordnern und E-Mails für eine flüssige Benutzererfahrung.
-* Optimierung interner Workflows durch strukturierte Darstellung und schnelle Navigation.
-
-## Schnittstellen & Export
-
-* Entwicklung eines flexiblen Export-Systems im JSON-Format.
-* Unterstützung zusätzlicher Header-Informationen (inkl. X-Header) zur Weiterverarbeitung in Drittsystemen.
-* Bereitstellung einer sicheren Brücke zwischen E-Mail-Kommunikation und internen Geschäftsprozessen.
+### 🎯 Fokus
+- Mandantenfähige Systemarchitektur
+- Automatisiertes Matching von Kandidaten & Jobs
+- Rollenbasierte Benutzerverwaltung
+- Kampagnen- & CRM-Integration (u.a. Salesforce)
+- DSGVO-konforme Datenprozesse
 
 ### 📈 Ergebnis
-
-Ein hochprofessioneller webbasierten IMAP-Client, der maximale Datensicherheit mit einer performanten und modernen Benutzeroberfläche kombiniert. Die Anwendung ermöglicht die sichere Verarbeitung und strukturierte Weitergabe von E-Mail-Daten, ohne die Privatsphäre der Nutzer oder Unternehmensrichtlinien zu kompromittieren.
-
-### 🛠️ Technologien
-
-`PHP 8` · `JavaScript` · `MySQL` · `IMAP` · `Bootstrap 5` · `Smarty` · `AES-256-CBC` · `HTML Sanitizing` · `MIME Parsing` · `JSON Export` · `Responsive UI` · `Security Architecture`
-
+Produktives System im Einsatz bei mehreren Kunden als zentrale Recruiting-Plattform.
 
 ---
 
-## 🏗️ **Bild- und PDF-Export-App für Immobiliengutachten**
+## ⚙️ Vermarkter Backend – Abrechnungssystem
 
-**📅 Zeitraum:** Nov 2025 – März 2026
-**🏢 Unternehmen:** Aspeo GmbH
+### ⚡ TL;DR
+Backend-System zur automatisierten Mandantenanlage und Provisionsabrechnung.
 
-### 🎯 Ausgangssituation
-
-Für die Erstellung von Immobiliengutachten mussten Bildmaterialien bislang manuell gesammelt, beschrieben und separat in PDF-Dokumente eingefügt werden.
-Dieser Prozess war **zeitaufwendig**, **fehleranfällig** und **nicht standardisiert**.
-
-### 💡 Aufgabe
-
-Entwicklung einer **webbasierten Anwendung**, mit der Mitarbeitende Bildmaterial zentral verwalten, sortieren und direkt als formatiertes PDF exportieren können.
-Ziel war eine **einfache Benutzerführung** und die **spätere Mandantenfähigkeit** des Systems.
-
-### 🧠 Vorgehen
-
-* Entwicklung der **Projekt- und Bildverwaltung** (PHP, MySQL, Smarty Framework)
-* Implementierung von **Upload- und Sortierfunktionen** (Dropzone, jQuery UI Sortable)
-* Aufbau der **PDF-Export-Logik** inkl. Vorlagen- und Spracheinstellungen
-* Entwicklung eines **rollenbasierten Login-Systems** mit Benutzer- und Vorlagenverwaltung
-* Erstellung dynamischer **Projektlisten** (DataTables) inkl. Filter- und Exportfunktionen
-* Aufbau konfigurierbarer **Systemeinstellungen** (Labeltexte, Standardwerte, Sprache, Mandantenspezifika)
+### 🎯 Fokus
+- Automatische Erstellung neuer Kundeninstanzen
+- Subdomain- & Datenbank-Provisionierung
+- Mehrstufiges Provisions- & Abrechnungssystem
+- Integration in bestehende Plattformen
 
 ### 📈 Ergebnis
-
-Die Anwendung ermöglicht eine **effiziente Erstellung und Verwaltung** von bildbasierten Gutachtenanhängen.
-Sie befindet sich aktuell im **Pilotbetrieb** und wird kontinuierlich weiterentwickelt, um zukünftig **mandantenfähig ausgerollt** zu werden.
-
-### 🛠️ Technologien
-
-`PHP` · `MySQL` · `Smarty` · `User Role Management` · `jQuery` · `Bootstrap` · `DataTables`
+Basis der Multi-Tenant-Architektur des Recruiting-Ökosystems.
 
 ---
-## ⚙️ **Vermarkter-Backend – Abrechnungssystem für das Recruiting Tool**
 
-**📅 Zeitraum:** Jan 2025 – März 2026
-**🏢 Unternehmen:** Aspeo GmbH
+## 📊 Jobdatenbank & Import-System
 
-### 🎯 Ausgangssituation
+### ⚡ TL;DR
+Automatisiertes System zur Verarbeitung von Jobdaten als Grundlage für Matching & CRM.
 
-Das bestehende Recruiting Tool war ursprünglich als **Einzelinstanz** konzipiert.
-Mit zunehmender Nutzung entstand der Bedarf, das System **mandantenfähig** zu gestalten, um mehrere Kunden parallel betreuen und **Vermarkter automatisiert abrechnen** zu können.
-Eine skalierbare Backend-Struktur existierte zu diesem Zeitpunkt noch nicht.
-
-### 💡 Aufgabe
-
-Konzeption und Entwicklung eines eigenständigen **Backend-Systems**, das neue Kundeninstanzen automatisch anlegt, Subdomains erzeugt und ein mehrstufiges Abrechnungs- sowie Berechtigungssystem für Vermarkter bereitstellt.
-
-### 🧠 Vorgehen
-
-* Aufbau der **Backend-Architektur** mit PHP, MySQL und Smarty Framework
-* Implementierung eines **rollenbasierten Berechtigungssystems** *(User Role Management)*
-* Automatische Erstellung neuer **Kundendatenbanken** inkl. Subdomain-Generierung
-* Entwicklung einer **Abrechnungslogik** für Vermarkter mit mehrstufigem Provisionsmodell
-* Integration von **DataTables** zur Verwaltung und Auswertung von Buchungs- und Rechnungsdaten
-* **Anbindung an bestehende Systeme** wie das Recruiting Tool und das Shootout-Modul
+### 🎯 Fokus
+- Cronjob-basierte Datenpipelines
+- Job-Crawling & Datenvalidierung
+- Erstellung von Firmen- & Kontaktdatensätzen
+- Datenbereinigung & Duplikatlogik
 
 ### 📈 Ergebnis
-
-Das neue Backend bildet die **technische Grundlage der Multi-Tenant-Struktur** des Recruiting Tools.
-Es ermöglicht die **vollautomatische Verwaltung neuer Mandanten**, die **Subdomain-Erstellung** und die **Abrechnung von Vermarktern** über ein skalierbares, zentrales System.
-Der Rollout erfolgt schrittweise parallel mit dem Hauptsystem.
-
-### 🛠️ Technologien
-
-`PHP` · `MySQL` · `Smarty` · `Backend & Frontend Development` · `Prozessautomatisierung` · `User Role Management` · `jQuery` · `Bootstrap` · `DataTables`
+Zentrale Datengrundlage für Recruiting- und Matching-Systeme.
 
 ---
 
-## 🧩 **Recruiting Tool – Bewerberverwaltung & Matching-System**
+## 💸 E-Rechnung Editor
 
-**📅 Zeitraum:** Jan 2024 – März 2026
-**🏢 Unternehmen:** Aspeo GmbH
+### ⚡ TL;DR
+Webbasierter Editor zur Erstellung & Validierung von XRechnung & ZUGFeRD.
 
-### 🎯 Ausgangssituation
-
-Im Recruiting-Prozess fehlte eine **zentrale, skalierbare Lösung**, um Kandidaten, Unternehmen und Vermarkter effizient zu verwalten und zusammenzuführen.
-Bestehende Systeme waren **nicht mandantenfähig** und boten keine flexible Automatisierung für **Matching-, Abrechnungs- oder Kampagnenprozesse**.
-
-### 💡 Aufgabe
-
-Konzeption und Entwicklung eines **mandantenfähigen Recruiting-Systems**, das Bewerberdaten zentral verarbeitet, automatisierte Zuordnungen ermöglicht und gleichzeitig alle **Datenschutz- und Rechteanforderungen** erfüllt.
-
-### 🧠 Vorgehen
-
-* Entwicklung der kompletten **Backend-Logik** (PHP, MySQL, Smarty Framework)
-* Aufbau einer **Multi-Tenant-Architektur** mit automatischer Mandanten- und Datenbankanlage
-* Implementierung eines **rollenbasierten Berechtigungssystems** *(User Role Management)*
-* Entwicklung des **Matching-Systems** zur automatisierten Zuordnung von Kandidaten und Stellenprofilen
-* Integration eines **Kampagnenmoduls** für E-Mail- und CRM-basierte Ansprache
-* **Anbindung externer Systeme**, u. a. Salesforce-API für Kampagnen- und Benutzerimporte
-* Aufbau von **Import- und Exportfunktionen** (Excel, CSV, JSON) zur Massenverarbeitung
-* Entwicklung einer **rollenabhängigen Benutzeroberfläche** für Recruiter, Administratoren und Vermarkter
-* Implementierung von **DSGVO-konformen Prozessen** (Opt-in, Tracking, Lösch- und Rechteverwaltung)
-* Nutzung von **DataTables und jQuery** für performante, filterbare Übersichten
+### 🎯 Fokus
+- XML-Validierung & Formatprüfung
+- UX-optimierte Eingabemasken
+- Gesetzeskonforme Rechnungslogik
+- Browserbasierte Erstellung ohne Installation
 
 ### 📈 Ergebnis
-
-Das Recruiting Tool ist **produktiv im Einsatz** bei mehreren Kunden und bildet die Grundlage für eine **skalierbare Multi-Tenant-Plattform**.
-Es automatisiert Matching-, Reporting- und Abrechnungsprozesse, reduziert den manuellen Aufwand erheblich und ermöglicht den geplanten Ausbau um zusätzliche Module wie das Vermarkter-Backend.
-
-### 🛠️ Technologien
-
-`PHP` · `MySQL` · `JavaScript` · `Prozessautomatisierung` · `User Role Management`
+Produktives Tool zur Erstellung digitaler Rechnungen im Unternehmensumfeld.
 
 ---
 
-## 🧱 **Office Add-in – Microsoft Word Plugin mit Webfrontend**
+# ⚙️ Spezialsysteme
 
-**📅 Zeitraum:** Juli 2025 – Sept 2025
-**🏢 Unternehmen:** Aspeo GmbH
+## 🛡️ Web-basierter IMAP Viewer
 
-### 🎯 Ausgangssituation
+### ⚡ TL;DR
+Sicherer, zustandsloser IMAP-Webclient für Unternehmensumgebungen.
 
-Ein Kunde benötigte ein **Microsoft Word Add-in**, um interne Dokumentenprozesse zu automatisieren und Arbeitsabläufe direkt in Word zu integrieren.
-Dafür musste ein eigenständiges, webbasiertes **Frontend** entwickelt werden, das alle erforderlichen Funktionen und UI-Komponenten für das Add-in bereitstellt.
-
-### 💡 Aufgabe
-
-Entwicklung des **kompletten Frontends** für das Microsoft Office Add-in.
-Ziel war eine **klare Benutzeroberfläche**, eine **logische Struktur** und die technische Vorbereitung für die spätere Integration in Word.
-
-### 🧠 Vorgehen
-
-* Umsetzung der **Benutzeroberfläche** mit HTML, JavaScript und Bootstrap
-* Vorbereitung der **Frontend-Funktionen** für die API-Anbindung
-* Entwicklung **interaktiver Formulare und Komponenten** für die Office-Integration
-* Abstimmung der UI-Struktur mit dem **Backend-Team** für die spätere Dateneinbindung
-* Sicherstellung von **Responsivität** und stabiler Darstellung innerhalb der Office-Umgebung
+### 🎯 Fokus
+- Stateless Proxy Architektur
+- Zero-Storage Sicherheitskonzept
+- MIME Parsing (HTML, Text, CID-Inlining)
+- E-Mail Security Layer (Phishing Schutz, Sanitizing)
 
 ### 📈 Ergebnis
-
-Das entwickelte Frontend bildet die **Grundlage für das Word Add-in** und ermöglicht eine **nahtlose Einbindung** der geplanten Funktionen in die Microsoft Office-Oberfläche.
-Der Fokus lag auf **klarer Struktur**, **intuitiver Bedienung** und einer **technisch sauberen Vorbereitung** für die spätere Backend-Integration.
-
-### 🛠️ Technologien
-
-`JavaScript` · `UX/UI` · `Frontend-Entwicklung` · `Bootstrap` · `jQuery`
+Sicheres Tool zur E-Mail-Verarbeitung ohne dauerhafte Speicherung sensibler Daten.
 
 ---
 
-## 🗃️ **Jobdatenbank & Import-System – Automatisierte Datengrundlage für spätere Recruiting-Plattform**
+## 🏗️ Bild- & PDF Export (Immobiliengutachten)
 
-**📅 Zeitraum:** Jan 2024 – Juni 2025
-**🏢 Unternehmen:** Aspeo GmbH
+### ⚡ TL;DR
+System zur strukturierten Verwaltung und PDF-Erstellung von Bildgutachten.
 
-### 🎯 Ausgangssituation
-
-Vor dem Aufbau des heutigen Recruiting Tools bestand die Anforderung, eine **zentrale Jobdatenbank** zu entwickeln, die Stellenanzeigen automatisiert sammelt, analysiert und in strukturierter Form bereitstellt.
-Ziel war es, aus diesen Jobdaten **Unternehmen und Kontakte zu generieren** – als Basis für künftige Recruiting- und Matching-Prozesse.
-
-### 💡 Aufgabe
-
-Konzeption und Entwicklung eines **mehrstufigen Import- und Verarbeitungssystems**, das über Jobcrawler täglich neue Jobs importiert, prüft, validiert und daraus automatisch Unternehmens- und Kontaktdatensätze erstellt.
-
-### 🧠 Vorgehen
-
-* Entwicklung der **Cronjob-Logik** zur täglichen Verarbeitung und Aktualisierung der Jobdaten
-* Aufbau **dynamischer Datenbankverbindungen** zur Verwaltung mehrerer Mandanten
-* Implementierung von **Import-, Validierungs- und Duplikatserkennungsroutinen**
-* Automatische Erstellung von **Unternehmens- und Kontaktdatensätzen** aus Jobinformationen
-* Aufbau eines webbasierten **Dashboards** (PHP, Smarty, jQuery, DataTables) zur Analyse und Kontrolle der Importe
-* Erweiterung des Systems um **Logging**, **Fehlerhandling** und **Performanceoptimierungen** für große Datenmengen
+### 🎯 Fokus
+- Bildverwaltung & Sortierung
+- PDF-Export Pipeline
+- Rollenbasierte Nutzerverwaltung
+- Mandantenfähige Vorbereitung
 
 ### 📈 Ergebnis
-
-Das System bildet die **technologische Grundlage** für die spätere Recruiting-Plattform.
-Es ermöglicht die **automatisierte Erfassung und Aufbereitung** von tausenden Jobdaten täglich, schafft **saubere Datenstrukturen** für Matching und Vertrieb und verbindet so **Job-, Unternehmens- und Kontaktdaten** in einem zentralen Ökosystem.
-
-### 🛠️ Technologien
-
-`PHP` · `MySQL` · `Cronjobs` · `Automatisierung` · `Smarty` · `jQuery` · `DataTables` · `Backend & Frontend Development` · `Datenvalidierung`
+Standardisierung und Automatisierung von Gutachtenprozessen.
 
 ---
 
-## 💸 **Aspeo E-Rechnung – Webbasierter E-Rechnungseditor**
+## 🧾 Backup Monitoring Tool
 
-**📅 Zeitraum:** Aug 2024 – März 2025
-**🏢 Unternehmen:** Aspeo GmbH
+### ⚡ TL;DR
+Zentrales Monitoring-System für automatisierte Server-Backups.
 
-### 🎯 Ausgangssituation
-
-Viele Unternehmen benötigten eine einfache Möglichkeit, **gesetzeskonforme E-Rechnungen** zu erstellen, ohne lokale Software installieren zu müssen.
-Bestehende Tools waren **kompliziert**, **unübersichtlich** oder nicht vollständig kompatibel mit aktuellen Standards wie **XRechnung** und **ZUGFeRD**.
-
-### 💡 Aufgabe
-
-Entwicklung eines **webbasierten Editors**, mit dem Nutzer direkt im Browser **strukturierte E-Rechnungen** erstellen, validieren und exportieren können – inklusive **Plausibilitätsprüfungen** und **Formatvalidierung** gemäß den geltenden Normen.
-
-### 🧠 Vorgehen
-
-* Technische **Planung und Definition der Systemarchitektur**
-* Entwicklung der **Frontend- und Backend-Logik** (PHP, Smarty, Bootstrap, JavaScript)
-* Implementierung der **XML-Validierung** und automatischen Formatprüfung für XRechnung & ZUGFeRD
-* Aufbau einer **intuitiven Benutzeroberfläche** mit Fokus auf Benutzerfreundlichkeit und Barrierefreiheit
-* Zusammenarbeit mit internen Teams für **Design, Validierung und Deployment**
-* Sicherstellung einer **nachhaltigen Code-Struktur** und modularen Erweiterbarkeit
+### 🎯 Fokus
+- Cronjob-Überwachung
+- Fehlerlogging & Statustracking
+- Visual Dashboard für Admins
+- Automatisierte Statusanalyse
 
 ### 📈 Ergebnis
-
-Das Tool ist **produktiv im Einsatz** unter [e-rechnung.aspeo.de/editor](https://e-rechnung.aspeo.de/editor).
-Es ermöglicht Unternehmen eine **einfache, rechtssichere und barrierearme Erstellung digitaler Rechnungen** direkt im Browser – mit Fokus auf **UX**, **Datenvalidierung** und **langfristige Wartbarkeit**.
-
-### 🛠️ Technologien
-
-`PHP` · `JavaScript` · `MySQL` · `JSON` · `Projektplanung`
+Reduziert manuellen Kontrollaufwand und erhöht Systemsicherheit.
 
 ---
 
-## 👥 **Talentpool – Anonymisierte Kandidatenplattform**
+## 👥 Talentpool Plattform
 
-**📅 Zeitraum:** Mai 2024 – Okt 2024
-**🏢 Unternehmen:** Aspeo GmbH
+### ⚡ TL;DR
+Anonymisierte Kandidatenplattform für DSGVO-konforme Vermittlung.
 
-### 🎯 Ausgangssituation
-
-Partnerunternehmen suchten eine **datenschutzkonforme Möglichkeit**, Fachkräfte aus unterschiedlichen Branchen **anonymisiert auszutauschen und zu vermitteln**.
-Bestehende Recruiting-Systeme boten weder die notwendige Anonymisierung noch eine **technisch effiziente Struktur** für gemeinschaftliche Nutzung.
-
-### 💡 Aufgabe
-
-Entwicklung einer **webbasierten Plattform** mit öffentlichem Talentpool und angebundenem Backend, über die Kandidatenprofile **verwaltet, anonymisiert präsentiert** und über **standardisierte Prozesse vermittelt** werden können.
-
-### 🧠 Vorgehen
-
-* Entwicklung des **Backends** zur Verwaltung und Pflege von Kandidatenprofilen (PHP, MySQL, Smarty Framework)
-* Aufbau von **Rollen- und Rechteverwaltung** für Administratoren und Partnerunternehmen
-* Implementierung der **Such- und Filterlogik** für Kandidatenlisten (PHP, MySQL, JavaScript)
-* Gestaltung der **anonymisierten Profilansichten** inkl. UX/UI-Optimierung
-* Umsetzung eines **mehrstufigen Freigabe- und Exportprozesses** (DSGVO-konform)
-* Integration eines **Matching-Moduls** zur automatisierten Zuordnung von Profilen zu Anfragen
-* Erweiterung um **Statistiken**, **Favoritenlisten** und **Statusverwaltung**
-* Technische **Skalierung des Systems** für wachsende Datenmengen und neue Branchen
-* Entwicklung des öffentlichen Frontends unter [talentpool.techlister.de](https://talentpool.techlister.de)
+### 🎯 Fokus
+- Anonymisierte Profilverwaltung
+- Rollen- & Rechteverwaltung
+- Matching-Logik für Kandidaten
+- Partnerzugänge & Freigabeprozesse
 
 ### 📈 Ergebnis
-
-Das System ist **produktiv im Einsatz** und verbindet **anonymisierte Präsentation** mit **leistungsfähiger Verwaltungslogik**.
-Partnerunternehmen können so **DSGVO-konform Fachkräfte austauschen**, während das Backend eine **strukturierte Pflege, Auswertung und Weiterentwicklung** ermöglicht.
-Die Architektur ist **modular erweiterbar** und kann zukünftig für weitere Branchen und Automatisierungen ausgebaut werden.
-
-### 🛠️ Technologien
-
-`PHP` · `MySQL` · `JavaScript` · `UX/UI` · `Backend & Frontend Development`
+Produktive Plattform für anonymisierten Fachkräfteaustausch.
 
 ---
 
-## 🧾 **Backup Monitoring Tool – Server Backup-Management & Automatisierung**
+# 🎮 Frühere Erfahrung
 
-**📅 Zeitraum:** Sept 2023 – Jan 2024
-**🏢 Unternehmen:** Aspeo GmbH
+## 🎮 GTA Roleplay – Game Design & Systementwicklung
 
-### 🎯 Ausgangssituation
+### ⚡ TL;DR
+Leitung von Systemdesign & Wirtschaftssystemen eines GTA RP Servers.
 
-Die tägliche Sicherung von Kundendaten erfolgte über mehrere **unabhängige Server-Instanzen**, deren Backup-Status bislang nur **manuell überprüft** werden konnte.
-Das führte zu **Zeitverlusten**, erschwerter Fehleranalyse und einem erhöhten Risiko unbemerkter Sicherungsausfälle.
-
-### 💡 Aufgabe
-
-Entwicklung eines **internen Tools**, das sämtliche Backup-Vorgänge **automatisiert überwacht**, zentral protokolliert und Administratoren eine **visuelle Übersicht** über alle Sicherungsprozesse bietet.
-
-### 🧠 Vorgehen
-
-* Konzeption und Aufbau der **Datenbankstruktur** zur Speicherung aller Backup-Protokolle
-* Entwicklung mehrerer **Cronjobs** zur täglichen Durchführung und Statusaktualisierung
-* Implementierung eines **Monitoring-Dashboards** mit Erfolgs-, Fehler- und Laufzeitanzeigen
-* Integration von **Benachrichtigungs- und Filterfunktionen** für schnelle Fehleranalyse
-* Erweiterung der bestehenden Systeminfrastruktur zur **besseren Automatisierung und Skalierbarkeit**
+### 🎯 Fokus
+- Systemlogik für Wirtschaft & Organisationen
+- Datenbankstrukturierung (MySQL)
+- Teamkoordination & Projektleitung
+- Gameplay- & Regelentwicklung
 
 ### 📈 Ergebnis
-
-Das Tool reduziert den **manuellen Kontrollaufwand** erheblich, ermöglicht eine **transparente Fehleranalyse** und gewährleistet die **stabile Sicherung aller Kundendaten**.
-Es ist bis heute **produktiv im Einsatz** und ein zentraler Bestandteil des **Server-Monitorings**.
-
-### 🛠️ Technologien
-
-`PHP` · `MySQL` · `Cronjobs` · `Server Monitoring` · `Automatisierung` · `Backend Development`
+Stabiler, strukturierter Roleplay-Server mit aktiver Community.
 
 ---
-## 🎮 **Game Design Lead – GTA 5 Roleplay Community-Projekt**
 
-**📅 Zeitraum:** Feb 2021 – Feb 2023
-**🏠 Privatprojekt / Community-Initiative**
+# 🚀 Zielrichtung
 
-### 🎯 Ausgangssituation
+Ich konzentriere mich auf den Aufbau von:
 
-Ein bestehender **GTA 5 Roleplay-Server (ALTV)** benötigte eine klare Struktur, bessere interne Organisation und eine technische Weiterentwicklung.
-Ziel war ein **balanciertes Spielerlebnis** mit nachvollziehbaren Spielsystemen, funktionierenden Wirtschaftskreisläufen und abgestimmten Organisationskonzepten.
+- skalierbaren Backend-Systemen
+- SaaS-ähnlichen Plattformen
+- automatisierten Datenprozessen
+- klar strukturierten Systemarchitekturen
 
-### 💡 Aufgabe
-
-Übernahme der **Leitung und technischen Weiterentwicklung** des Projekts.
-Aufbau klarer Spielstrukturen und Definition von **Systemlogiken** für Unternehmen, Fraktionen und Behörden – inklusive **konzeptioneller und datenbankseitiger Umsetzung**.
-
-### 🧠 Vorgehen
-
-* **Leitung und Koordination** des Game-Design-Teams
-* Enge **Kommunikation mit Projektleitung, Dev-Leitung und Webdesign-Abteilung**
-* Entwicklung und Dokumentation **regelkonformer Spielsysteme** (z. B. Wirtschaft, Organisationen, Antragsprozesse)
-* Bearbeitung und Bewertung von **Spieler- und Gewerbeanträgen**
-* **Datenbankpflege** und kleinere Scripting-Aufgaben mit MySQL (HeidiSQL)
-* Unterstützung bei **Bugfixing** und konzeptionellen Verbesserungen
-* Selbstständige **Weiterbildung in AutoCAD und 3ds Max** zur Unterstützung von Mapping- und Designprozessen
-
-### 📈 Ergebnis
-
-Der Server erreichte eine **hohe Spieleraktivität** und starke **Community-Bindung** durch strukturierte Systeme, transparente Regeln und konsequente Weiterentwicklung.
-Das Projekt profitierte von **klaren Entscheidungswegen**, einer **stabilen Datenbasis** und einer **konsistenten Gameplay-Struktur**.
-
-### 🛠️ Technologien & Kompetenzen
-
-`Projektkoordination` · `Teamführung` · `Kommunikation` · `Game Design` · `MySQL` · `AutoCAD` · `3ds Max`
+Langfristig liegt der Fokus auf **produktnaher Softwareentwicklung mit hoher Systemtiefe**.
 
 ---
+
+# 📌 Hinweis
+
+Dieses Repository dient als zentrale Übersicht meiner technischen Entwicklung und Projektarbeit.
